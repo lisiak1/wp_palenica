@@ -1,4 +1,9 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { routes } from './app/app-routing.module';
 
-bootstrapApplication(AppComponent).catch((e) => console.error(e));
+bootstrapApplication(AppComponent, {
+  providers: [provideRouter(routes), BrowserAnimationsModule],
+}).catch((err) => console.error(err));
