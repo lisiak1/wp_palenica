@@ -29,3 +29,25 @@
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.button-container {
+  position: absolute;
+  bottom: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+  // background: rgba(0, 0, 0, 0.5); /* Same background as content */
+  padding: 0px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  // padding: 10px 20px; /* Adjust as needed */
+  font-size: 30px; /* Increase font size */
+  color: white; /* Adjust text color for better visibility */
+  background-color: transparent; /* Make button background transparent */
+  background: rgba(0, 0, 0, 0.5); /* Same background as content */
+  border: 1px solid white; /* Optional: Add border for better visibility */
+  cursor: pointer;
+}

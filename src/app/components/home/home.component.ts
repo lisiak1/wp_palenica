@@ -16,15 +16,15 @@ export class HomeComponent implements OnInit {
       title: 'Section 1 Title',
       text: 'Section 1 text content goes here.',
       imageDesktop: 'assets/home-desktop1.jpg',
-      imageMobileSmall: 'assets/images/section1-mobile-small.jpg',
-      imageMobileMedium: 'assets/images/section1-mobile-medium.jpg',
+      imageMobileSmall: 'assets/mobile01.jpg',
+      imageMobileMedium: 'assets/home-desktop1.jpg',
     },
     {
       title: 'Section 2 Title',
       text: 'Section 2 text content goes here.',
       imageDesktop: 'assets/home-desktop2.jpg',
-      imageMobileSmall: 'assets/images/section2-mobile-small.jpg',
-      imageMobileMedium: 'assets/images/section2-mobile-medium.jpg',
+      imageMobileSmall: 'assets/mobile02.jpg',
+      imageMobileMedium: 'assets/home-desktop2.jpg',
     },
   ];
 
