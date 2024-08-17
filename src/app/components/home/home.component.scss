@@ -1,65 +1,10 @@
 .sections-container {
   display: flex;
   flex-direction: column;
-  // height: 200vh; /* 2 sections, each taking full viewport height */
+  align-items: center;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
 }
 
-.section {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.8;
-  scroll-snap-align: start;
-  transition: transform 0.5s ease-in-out;
-}
-
-.section:hover {
-  transform: scale(1.05);
-}
-
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+.aaa {
   padding: 20px;
-  border-radius: 10px;
-}
-
-/* Media Queries for Responsiveness */
-@media (min-width: 769px) {
-  .section {
-    height: 200vh;
-  }
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 768px) {
-  .content {
-    width: 80%;
-    padding: 10px;
-  }
-
-  .section {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .content {
-    width: 90%;
-    padding: 5px;
-  }
-
-  .section {
-    height: 100vh;
-  }
 }
