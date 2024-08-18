@@ -5,13 +5,12 @@
       // Store the current path in sessionStorage before redirecting
       sessionStorage.redirect = location.href;
       // Redirect to the index.html page
-      location.href = "/wp-core/";
+      location.href = "/wp_palenica/";
     </script>
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="utf-8" />
-    <title>WpCore</title>
-    <base href="/wp_core/" />
+    <title>Palenica</title>
+    <base href="/wp_palenica/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
@@ -77,139 +76,6 @@
     />
     <noscript
       ><link href="./assets/css/bootstrap.min.css" rel="stylesheet"
-    /></noscript>
-    <style>
-      @-webkit-keyframes nc-icon-spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-    </style>
-    <link
-      href="./assets/css/nucleo-icons.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript
-      ><link href="./assets/css/nucleo-icons.css" rel="stylesheet"
-    /></noscript>
-    <style>
-      body {
-        color: #66615b;
-        font-size: 14px;
-        font-weight: 300;
-        font-family: "Montserrat", "Helvetica", Arial, sans-serif;
-      }
-      @media (max-width: 767px) {
-        body {
-          position: relative;
-          font-size: 12px;
-        }
-        @-webkit-keyframes topbar-x {
-          0% {
-            top: 0px;
-            -webkit-transform: rotate(0deg);
-          }
-          45% {
-            top: 6px;
-            -webkit-transform: rotate(145deg);
-          }
-          75% {
-            -webkit-transform: rotate(130deg);
-          }
-          100% {
-            -webkit-transform: rotate(135deg);
-          }
-        }
-        @-webkit-keyframes topbar-back {
-          0% {
-            top: 6px;
-            -webkit-transform: rotate(135deg);
-          }
-          45% {
-            -webkit-transform: rotate(-10deg);
-          }
-          75% {
-            -webkit-transform: rotate(5deg);
-          }
-          100% {
-            top: 0px;
-            -webkit-transform: rotate(0);
-          }
-        }
-        @-webkit-keyframes bottombar-x {
-          0% {
-            bottom: 0px;
-            -webkit-transform: rotate(0deg);
-          }
-          45% {
-            bottom: 6px;
-            -webkit-transform: rotate(-145deg);
-          }
-          75% {
-            -webkit-transform: rotate(-130deg);
-          }
-          100% {
-            -webkit-transform: rotate(-135deg);
-          }
-        }
-        @-webkit-keyframes bottombar-back {
-          0% {
-            bottom: 6px;
-            -webkit-transform: rotate(-135deg);
-          }
-          45% {
-            -webkit-transform: rotate(10deg);
-          }
-          75% {
-            -webkit-transform: rotate(-5deg);
-          }
-          100% {
-            bottom: 0px;
-            -webkit-transform: rotate(0);
-          }
-        }
-        @-webkit-keyframes fadeIn {
-          0% {
-            opacity: 0;
-          }
-          100% {
-            opacity: 1;
-          }
-        }
-      }
-    </style>
-    <link
-      href="./assets/css/paper-kit.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript
-      ><link href="./assets/css/paper-kit.css" rel="stylesheet"
-    /></noscript>
-    <style>
-      @-webkit-keyframes nc-icon-spin {
-        0% {
-          -webkit-transform: rotate(0deg);
-        }
-        100% {
-          -webkit-transform: rotate(360deg);
-        }
-      }
-    </style>
-    <link
-      href="./assets/css/nucleo-icons.css"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript
-      ><link href="./assets/css/nucleo-icons.css" rel="stylesheet"
     /></noscript>
 
     <!-- Fonts and icons -->
@@ -511,6 +377,13 @@
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
       @charset "UTF-8";
       :root {
         --bs-blue: #0d6efd;
@@ -669,33 +542,32 @@
         --bs-breakpoint-xl: 1200px;
         --bs-breakpoint-xxl: 1400px;
       }
-      body {
-        color: #66615b;
-        font-size: 14px;
-        font-weight: 300;
-        font-family: Montserrat, Helvetica, Arial, sans-serif;
-      }
-      @media (max-width: 767px) {
-        body {
-          position: relative;
-          font-size: 12px;
-        }
-      }
     </style>
     <link
       rel="stylesheet"
-      href="styles.46f3ea3bb72b4920.css"
+      href="styles.41cffa6dcfae2bb7.css"
       media="print"
       onload="this.media='all'"
     />
     <noscript
-      ><link rel="stylesheet" href="styles.46f3ea3bb72b4920.css"
+      ><link rel="stylesheet" href="styles.41cffa6dcfae2bb7.css"
     /></noscript>
   </head>
   <body>
     <app-root></app-root>
+
+    <!--this needs to be here fro github pages to work-->
+    <script>
+      // Check if the 404 redirect is set in sessionStorage
+      if (sessionStorage.redirect) {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        // Redirect to the stored URL
+        window.location = redirect;
+      }
+    </script>
     <script src="runtime.eb970ad327fcfec4.js" type="module"></script>
-    <script src="polyfills.a1723c1293f00534.js" type="module"></script>
-    <script src="main.72c9d7682ed47a4f.js" type="module"></script>
+    <script src="polyfills.bdb48ca31b6c46a2.js" type="module"></script>
+    <script src="main.57fd49cb05e6604c.js" type="module"></script>
   </body>
 </html>
