@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
+import { WeddingHomeComponent } from './components/wedding/wedding-home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -14,7 +14,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     NavbarComponent,
     CommonModule,
     RouterModule,
-    HomeComponent,
+    WeddingHomeComponent,
   ],
 })
 export class AppComponent {}

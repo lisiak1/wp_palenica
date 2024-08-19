@@ -6,11 +6,12 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { LazyLoadBackgroundDirective } from 'src/app/directives/lazy-load-background-directive.directive';
 
 @Component({
   selector: 'app-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LazyLoadBackgroundDirective],
   templateUrl: './section.component.html',
   styleUrl: './section.component.scss',
 })
