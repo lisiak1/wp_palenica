@@ -1,27 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
-  width: 100%;
+  margin: 0;
 }
 
 .main-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0px; /* Optional: Add padding for better spacing */
-  box-sizing: border-box; /* Ensure padding is included in the element's total width */
-  min-height: 100vh; /* Ensure the container takes at least the full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
 }
 
-@media (max-width: 768px) {
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+app-navbar {
+  flex: 0 0 auto; /* Navbar takes only the space it needs */
+}
+
+.content {
+  flex: 1 0 auto; /* Content takes the remaining space */
+}
+
+app-footer {
+  flex: 0 0 auto; /* Footer takes only the space it needs */
 }

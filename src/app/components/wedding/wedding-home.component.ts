@@ -26,6 +26,20 @@ export class WeddingHomeComponent implements OnInit {
       imageMobileSmall: 'assets/img/mobile/wedding_02.jpg',
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
     },
+    {
+      title: 'Section 3 Title',
+      text: 'Section 3 text content goes here.',
+      imageDesktop: 'assets/img/desktop/wedding_02.jpg',
+      imageMobileSmall: 'assets/img/mobile/wedding_02.jpg',
+      imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
+    },
+    {
+      title: 'Section 4 Title',
+      text: 'Section 4 text content goes here.',
+      imageDesktop: 'assets/img/desktop/wedding_02.jpg',
+      imageMobileSmall: 'assets/img/mobile/wedding_02.jpg',
+      imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
+    },
   ];
 
   constructor() {}

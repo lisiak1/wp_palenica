@@ -1,0 +1,39 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 0 auto; /* Profile container takes the remaining space */
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url("../../../assets/img/logo/profile.webp"); /* Replace with actual photo path */
+  background-size: cover;
+  background-position: center;
+  margin: -75px 0 20px 0;
+  border: 5px solid white;
+  z-index: 1;
+}
+
+.section {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+}
+
+.section {
+  background-color: #f0f0f0;
+}
+
+.section p {
+  margin: 10px 0;
+}
