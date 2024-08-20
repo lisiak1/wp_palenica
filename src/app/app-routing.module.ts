@@ -4,7 +4,8 @@ import { WeddingPremisesComponent } from './components/wedding-premises/wedding-
 import { WeddingTourComponent } from './components/wedding-tour/wedding-tour.component';
 
 export const routes: Routes = [
-  { path: '', component: WeddingHomeComponent },
+  { path: '', redirectTo: 'wedding-home', pathMatch: 'full' },
+  { path: 'wedding-home', component: WeddingHomeComponent },
   { path: 'wedding-premises', component: WeddingPremisesComponent },
   { path: 'wedding-tour', component: WeddingTourComponent },
 ];
