@@ -433,7 +433,6 @@
   <body>
     <app-root></app-root>
 
-    <!--this needs to be here fro github pages to work-->
     <script>
       // Check if the 404 redirect is set in sessionStorage
       if (sessionStorage.redirect) {
@@ -446,15 +445,5 @@
     <script src="runtime.61cada25176609e9.js" type="module"></script>
     <script src="polyfills.f16e8660a5a67528.js" type="module"></script>
     <script src="main.0862a31f25a1281f.js" type="module"></script>
-
-    <script>
-      // Check if the 404 redirect is set in sessionStorage
-      if (sessionStorage.redirect) {
-        const redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        // Redirect to the stored URL
-        window.location = redirect;
-      }
-    </script>
   </body>
 </html>
