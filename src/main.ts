@@ -1,12 +1,16 @@
+import { importProvidersFrom } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter, withHashLocation } from '@angular/router';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routes } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes, withHashLocation()), // Enable hash-based routing
-    { provide: BrowserAnimationsModule, useValue: BrowserAnimationsModule },
+    provideAnimations(), // Provide animations
+    importProvidersFrom(MatExpansionModule, MatButtonModule), // Import Angular Material modules
   ],
 }).catch((err) => console.error(err));
