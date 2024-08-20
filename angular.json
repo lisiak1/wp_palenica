@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wp_palenica": {
+    "wp-palenica": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/wp_palenica",
+            "outputPath": "dist/wp-palenica",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wp_palenica:build:production"
+              "buildTarget": "wp-palenica:build:production"
             },
             "development": {
-              "buildTarget": "wp_palenica:build:development"
+              "buildTarget": "wp-palenica:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "wp_palenica:build"
+            "buildTarget": "wp-palenica:build"
           }
         },
         "test": {
