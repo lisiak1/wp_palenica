@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 import {
   trigger,
   state,
@@ -12,41 +12,52 @@ import {
   templateUrl: './wedding-tour.component.html',
   styleUrls: ['./wedding-tour.component.scss'],
   animations: [
-    trigger('slideIn', [
+    trigger('fadeInScale', [
       state(
         'hidden',
         style({
-          left: '100%',
-          transform: 'translateX(-100%)',
+          opacity: 0,
+          transform: 'scale(0.8)',
         })
       ),
       state(
         'visible',
         style({
-          left: '50%',
-          transform: 'translateX(-50%)',
+          opacity: 1,
+          transform: 'scale(1)',
         })
       ),
-      transition('hidden => visible', [animate('1s')]), // Adjusted duration for better mobile experience
+      transition('hidden => visible', [animate('1.5s ease-out')]),
     ]),
   ],
 })
-export class WeddingTourComponent {
-  photoStates = ['hidden', 'hidden', 'hidden'];
+export class WeddingTourComponent implements AfterViewInit, OnDestroy {
+  textStates = ['hidden', 'hidden', 'hidden'];
+  observer: IntersectionObserver;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const elements = document.querySelectorAll('.photo-background');
-    elements.forEach((element, index) => {
-      const rect = element.getBoundingClientRect();
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        this.photoStates[index] = 'visible';
-      }
+  constructor() {
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = parseInt(
+            entry.target.getAttribute('data-index') || '0',
+            10
+          );
+          this.textStates[index] = 'visible';
+        }
+      });
     });
   }
 
-  @HostListener('window:resize', [])
-  onWindowResize() {
-    this.onWindowScroll(); // Recalculate visibility on resize
+  ngAfterViewInit() {
+    const elements = document.querySelectorAll('.animated-text');
+    elements.forEach((element, index) => {
+      element.setAttribute('data-index', index.toString());
+      this.observer.observe(element);
+    });
+  }
+
+  ngOnDestroy() {
+    this.observer.disconnect();
   }
 }
