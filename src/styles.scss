@@ -10,14 +10,12 @@ body {
   min-height: 100vh;
 }
 
-app-navbar {
-  flex: 0 0 auto; /* Navbar takes only the space it needs */
+app-main {
+  flex: 1 0 auto;
+  overflow-y: auto;
 }
-
-.content {
-  flex: 1 0 auto; /* Content takes the remaining space */
-}
-
 app-footer {
-  flex: 0 0 auto; /* Footer takes only the space it needs */
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+  text-align: center; /* Optional: Center align text in footer */
+  z-index: 100; /* Ensures the footer is above the content */
 }

@@ -6,11 +6,23 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter, withHashLocation } from '@angular/router';
 import { routes } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes, withHashLocation()), // Enable hash-based routing
     provideAnimations(), // Provide animations
-    importProvidersFrom(MatExpansionModule, MatButtonModule), // Import Angular Material modules
+    importProvidersFrom(
+      MatExpansionModule,
+      MatButtonModule,
+      MatToolbarModule,
+      MatButtonModule,
+      MatIconModule,
+      MatSidenavModule,
+      MatListModule
+    ), // Import Angular Material modules
   ],
 }).catch((err) => console.error(err));
