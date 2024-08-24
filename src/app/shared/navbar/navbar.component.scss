@@ -182,17 +182,7 @@ $google-maps-color: #db4437;
   }
 }
 
-.social-icon.facebook:hover {
-  background-color: #3b5998; /* Facebook blue on hover */
-  color: white; /* Change icon color to white on hover */
-}
-
-.social-icon.instagram:hover {
-  background-color: #e4405f; /* Instagram color on hover */
-  color: white; /* Change icon color to white on hover */
-}
-
-.social-icon.google-maps:hover {
-  background-color: #db4437; /* Google Maps red on hover */
-  color: white; /* Change icon color to white on hover */
+.social-icons button:focus {
+  outline: none;
+  box-shadow: none;
 }

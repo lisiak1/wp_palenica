@@ -1,13 +1,41 @@
 <div class="profile-container">
-  <div class="section">
-    <p><i class="fas fa-phone icon"></i> +123 456 7890</p>
-    <p><i class="fas fa-envelope icon"></i> Email</p>
-  </div>
+  <div class="section-first"></div>
   <div class="profile-photo"></div>
   <div class="section">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
-      odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.
+      Nicole je skúsená svadobná organizátorka, ktorá sa postará o všetky vaše
+      potreby a každý detail. S jej odbornými znalosťami a starostlivosťou bude
+      vaša svadba nezabudnuteľná.
     </p>
   </div>
+  <div class="section-mobile">
+    <p><i class="fas fa-phone icon"></i> +421 987 654 321</p>
+    <p><i class="fas fa-envelope icon"></i> nicole.weddings&#64;gmail.com</p>
+  </div>
+</div>
+
+<!-- New blocks with photos as background -->
+<div
+  class="section photo-background"
+  style="background-image: url('assets/img/obhliadka/01.jpg')"
+>
+  <p class="animated-text" [@slideIn]="photoStates[0]">
+    Prvý obrázok s textom.
+  </p>
+</div>
+<div
+  class="section photo-background"
+  style="background-image: url('assets/img/obhliadka/02.jpg')"
+>
+  <p class="animated-text" [@slideIn]="photoStates[1]">
+    Druhý obrázok s textom.
+  </p>
+</div>
+<div
+  class="section photo-background"
+  style="background-image: url('assets/img/obhliadka/03.jpg')"
+>
+  <p class="animated-text" [@slideIn]="photoStates[2]">
+    Tretí obrázok s textom.
+  </p>
 </div>
