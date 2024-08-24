@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './google-calendar.component.html',
-  styleUrl: './google-calendar.component.scss'
+  styleUrl: './google-calendar.component.scss',
 })
-export class GoogleCalendarComponent {
-
-}
+export class GoogleCalendarComponent {}

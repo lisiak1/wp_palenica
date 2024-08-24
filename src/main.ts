@@ -10,6 +10,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -23,7 +25,11 @@ bootstrapApplication(AppComponent, {
       MatIconModule,
       MatSidenavModule,
       MatListModule,
-      MatIconRegistry
+      MatIconRegistry,
+      CalendarModule.forRoot({
+        provide: DateAdapter,
+        useFactory: adapterFactory,
+      })
     ), // Import Angular Material modules
   ],
 }).catch((err) => console.error(err));
