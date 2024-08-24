@@ -1,10 +1,10 @@
 <div class="section-inner" [appLazyLoadBackground]="backgroundImage">
   <div class="content">
-    <h2>{{ title }}</h2>
-    <p>{{ text }}</p>
+    <h2 @titleAnimation>{{ title }}</h2>
+    <p @textAnimation>{{ text }}</p>
   </div>
 
   <div class="button-container">
-    <button class="btn">Click To Action</button>
+    <button class="btn" @buttonAnimation>Click To Action</button>
   </div>
 </div>

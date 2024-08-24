@@ -7,6 +7,13 @@ import {
   OnInit,
 } from '@angular/core';
 import { LazyLoadBackgroundDirective } from 'src/app/directives/lazy-load-background-directive.directive';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-section',
@@ -14,6 +21,32 @@ import { LazyLoadBackgroundDirective } from 'src/app/directives/lazy-load-backgr
   imports: [CommonModule, LazyLoadBackgroundDirective],
   templateUrl: './section.component.html',
   styleUrl: './section.component.scss',
+  animations: [
+    trigger('titleAnimation', [
+      state('void', style({ opacity: 0, transform: 'translateY(-20px)' })),
+      transition(':enter', [
+        animate(
+          '500ms ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ),
+      ]),
+    ]),
+    trigger('textAnimation', [
+      state('void', style({ opacity: 0, transform: 'translateY(-20px)' })),
+      transition(':enter', [
+        animate(
+          '700ms ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ),
+      ]),
+    ]),
+    trigger('buttonAnimation', [
+      state('void', style({ opacity: 0, transform: 'scale(0.8)' })),
+      transition(':enter', [
+        animate('900ms ease-out', style({ opacity: 1, transform: 'scale(1)' })),
+      ]),
+    ]),
+  ],
 })
 export class SectionComponent implements OnInit {
   @Input() title: string | undefined;
@@ -21,6 +54,9 @@ export class SectionComponent implements OnInit {
   @Input() imageDesktop: string | undefined;
   @Input() imageMobileSmall: string | undefined;
   @Input() imageMobileMedium: string | undefined;
+  titleVisible = false;
+  textVisible = false;
+  buttonVisible: unknown;
 
   backgroundImage: string | undefined;
 

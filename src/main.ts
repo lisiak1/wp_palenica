@@ -7,7 +7,7 @@ import { provideRouter, withHashLocation } from '@angular/router';
 import { routes } from './app/app-routing.module';
 import { AppComponent } from './app/app.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
@@ -22,7 +22,8 @@ bootstrapApplication(AppComponent, {
       MatButtonModule,
       MatIconModule,
       MatSidenavModule,
-      MatListModule
+      MatListModule,
+      MatIconRegistry
     ), // Import Angular Material modules
   ],
 }).catch((err) => console.error(err));

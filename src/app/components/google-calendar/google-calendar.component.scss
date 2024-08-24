@@ -1,0 +1,17 @@
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px; /* Add some padding for better spacing */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.google-calendar-iframe {
+  border: none; /* Remove the border */
+  width: 100%;
+  max-width: 800px; /* Maximum width */
+  height: 80vh; /* Height relative to viewport height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+}
