@@ -54,6 +54,7 @@ export class SectionComponent implements OnInit {
   @Input() imageDesktop: string | undefined;
   @Input() imageMobileSmall: string | undefined;
   @Input() imageMobileMedium: string | undefined;
+  @Input() dimBackground: boolean | undefined = false;
   titleVisible = false;
   textVisible = false;
   buttonVisible: unknown;

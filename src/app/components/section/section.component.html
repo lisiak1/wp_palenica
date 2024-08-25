@@ -1,7 +1,19 @@
-<div class="section-container" [appLazyLoadBackground]="backgroundImage">
+<div
+  class="section-container"
+  [class.dim-background]="dimBackground"
+  [appLazyLoadBackground]="backgroundImage"
+>
   <div class="content">
-    <h2 @titleAnimation>{{ title }}</h2>
-    <p @textAnimation>{{ text }}</p>
+    <h1 @titleAnimation>{{ title }}</h1>
+    <h3 @textAnimation>{{ text }}</h3>
+  </div>
+
+  <div class="content">
+    <p @textAnimation>
+      KW {{ text }} vjjlajkljfklajfljakljfklaj fkljklajklfjklajfklaj
+      fjalkjflakjflajfljlk jfaljfaljfliW kjdklgjdljb ljdkljgldj jlsjflkdjflksj
+      lxjfasljflsjfls sljflsjf
+    </p>
   </div>
 
   <div class="button-container">

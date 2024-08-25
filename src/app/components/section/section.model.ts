@@ -1,8 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export interface SectionModel {
-  title: string;
-  text: string;
+  title: string | undefined;
+  subTitle?: string | undefined;
+  text?: string | undefined;
+  textBottom?: string | undefined;
   imageDesktop: string;
   imageMobileSmall: string;
   imageMobileMedium: string;
+  dimBackground: boolean | undefined;
 }

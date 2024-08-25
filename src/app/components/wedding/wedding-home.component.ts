@@ -21,32 +21,25 @@ export class WeddingHomeComponent {
   sections: SectionModel[] = [
     {
       title: 'Section 1 Title',
-      text: 'Section 1 text content goes here.',
+      subTitle: 'Section 1 Subtitle',
+      text: 'Text some text here here here some text content goes here.',
+      textBottom:
+        'Text bottom fksjfsj jsafjsl sjfjsjlf 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_01.jpg',
       imageMobileSmall: 'assets/img/mobile/wedding_01.jpg',
       imageMobileMedium: 'assets/img/mobile/wedding_01.jpg',
+      dimBackground: true,
     },
     {
       title: 'Section 2 Title',
+      subTitle: 'Section 2 Subtitle',
       text: 'Section 2 text content goes here.',
+      textBottom: 'Section 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_02.jpg',
       imageMobileSmall: 'assets/img/mobile/wedding_02.jpg',
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
+      dimBackground: true,
     },
-    // {
-    //   title: 'Section 3 Title',
-    //   text: 'Section 3 text content goes here.',
-    //   imageDesktop: 'assets/img/desktop/wedding_02.jpg',
-    //   imageMobileSmall: 'assets/img/mobile/wedding_02.jpg',
-    //   imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
-    // },
-    // {
-    //   title: 'Section 4 Title',
-    //   text: 'Section 4 text content goes here.',
-    //   imageDesktop: 'assets/img/desktop/wedding_02.jpg',
-    //   imageMobileSmall: 'assets/img/mobile/wedding_02.jpg',
-    //   imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
-    // },
   ];
 
   faqs = [

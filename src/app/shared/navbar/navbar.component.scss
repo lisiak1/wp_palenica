@@ -97,7 +97,7 @@ mat-nav-list {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Dim background */
-  z-index: 1; /* Ensure the overlay is above the content */
+  z-index: 1000; /* Ensure the overlay is above the content */
 }
 
 .logo {
