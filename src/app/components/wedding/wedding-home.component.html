@@ -1,13 +1,5 @@
 <div *ngFor="let section of sections">
-  <app-section
-    [title]="section.title"
-    [text]="section.text"
-    [imageDesktop]="section.imageDesktop"
-    [imageMobileSmall]="section.imageMobileSmall"
-    [imageMobileMedium]="section.imageMobileMedium"
-    [dimBackground]="section.dimBackground"
-  >
-  </app-section>
+  <app-section [model]="section"> </app-section>
 </div>
 
 <div class="faq-section mt-5">

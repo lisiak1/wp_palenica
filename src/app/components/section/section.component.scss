@@ -18,9 +18,14 @@
   background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
 }
 
+.title {
+  position: relative;
+  color: white;
+  padding: 20px;
+}
+
 .content {
   position: relative;
-  z-index: 1;
   color: white;
   padding: 20px;
 }

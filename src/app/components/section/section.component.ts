@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import {
+  ChangeDetectionStrategy,
   Component,
   HostBinding,
   HostListener,
@@ -14,10 +15,12 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { SectionModel } from './section.model';
 
 @Component({
   selector: 'app-section',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, LazyLoadBackgroundDirective],
   templateUrl: './section.component.html',
   styleUrl: './section.component.scss',
@@ -49,12 +52,8 @@ import {
   ],
 })
 export class SectionComponent implements OnInit {
-  @Input() title: string | undefined;
-  @Input() text: string | undefined;
-  @Input() imageDesktop: string | undefined;
-  @Input() imageMobileSmall: string | undefined;
-  @Input() imageMobileMedium: string | undefined;
-  @Input() dimBackground: boolean | undefined = false;
+  @Input() model!: SectionModel;
+
   titleVisible = false;
   textVisible = false;
   buttonVisible: unknown;
@@ -76,14 +75,15 @@ export class SectionComponent implements OnInit {
     this.setBackgroundImage();
   }
 
+  // todo create service for this
   setBackgroundImage() {
     const width = window.innerWidth;
     if (width <= 480) {
-      this.backgroundImage = this.imageMobileSmall;
+      this.backgroundImage = this.model.imageMobileSmall;
     } else if (width <= 768) {
-      this.backgroundImage = this.imageMobileMedium;
+      this.backgroundImage = this.model.imageMobileMedium;
     } else {
-      this.backgroundImage = this.imageDesktop;
+      this.backgroundImage = this.model.imageDesktop;
     }
   }
 }
