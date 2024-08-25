@@ -14,8 +14,14 @@ app-main {
   flex: 1 0 auto;
   overflow-y: auto;
 }
+
 app-footer {
   flex-shrink: 0; /* Prevents the footer from shrinking */
   text-align: center; /* Optional: Center align text in footer */
   z-index: 100; /* Ensures the footer is above the content */
+}
+
+:root {
+  --header-height: 70px;
+  --breadcrumb-height: 44px;
 }

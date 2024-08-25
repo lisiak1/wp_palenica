@@ -1,8 +1,10 @@
+@import "../../../styles.scss";
+
 .section-container {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   width: 100%;
   margin-bottom: 10px;
   box-sizing: border-box;
