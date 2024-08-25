@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
@@ -11,6 +11,10 @@ import {
   RouterModule,
 } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
+import { Breadcrumb } from 'src/app/services/breadcrumbs.model';
+import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
+import { Subject, takeUntil } from 'rxjs';
+import { BreadcrumbsComponent } from 'src/app/components/breadcrumbs/breadcrumbs.component';
 
 @Component({
   selector: 'app-main',
@@ -26,17 +30,37 @@ import { FooterComponent } from '../footer/footer.component';
     CommonModule,
     RouterModule,
     FooterComponent,
+    BreadcrumbsComponent,
   ],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   @ViewChild('drawer') drawer: MatSidenav | undefined;
 
-  constructor(private router: Router) {
+  breadcrumbs: Breadcrumb[] = [];
+  private destroy$ = new Subject<void>();
+
+  constructor(
+    private router: Router,
+    private breadcrumbService: BreadcrumbService
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.drawer?.close();
       }
     });
+  }
+
+  ngOnInit() {
+    this.breadcrumbService.breadcrumb$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((breadcrumbs) => {
+        this.breadcrumbs = breadcrumbs;
+      });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   closeNav() {

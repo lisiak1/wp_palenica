@@ -6,10 +6,11 @@ import { GoogleCalendarComponent } from './components/google-calendar/google-cal
 import { BlogComponent } from './components/blog/blog.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'wedding-home', pathMatch: 'full' },
-  { path: 'wedding-home', component: WeddingHomeComponent },
-  { path: 'wedding-premises', component: WeddingPremisesComponent },
-  { path: 'wedding-tour', component: WeddingTourComponent },
-  { path: 'calendar', component: GoogleCalendarComponent },
-  { path: 'blog', component: BlogComponent },
+  { path: '', redirectTo: 'svadby', pathMatch: 'full' },
+  { path: 'svadby/domov', redirectTo: 'svadby', pathMatch: 'full' },
+  { path: 'svadby', component: WeddingHomeComponent },
+  { path: 'svadby/priestory', component: WeddingPremisesComponent },
+  { path: 'svadby/obhliadka', component: WeddingTourComponent },
+  { path: 'svadby/kalendar', component: GoogleCalendarComponent },
+  { path: 'svadby/blog', component: BlogComponent },
 ];

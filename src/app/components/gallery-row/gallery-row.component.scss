@@ -1,0 +1,39 @@
+.gallery-section {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  .content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }
+}

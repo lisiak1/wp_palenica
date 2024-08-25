@@ -14,35 +14,35 @@
     <mat-nav-list>
       <a
         mat-list-item
-        routerLink="/wedding-home"
+        routerLink="/svadby/domov"
         routerLinkActive="active"
         (click)="closeNav()"
         >Domov</a
       >
       <a
         mat-list-item
-        routerLink="/calendar"
+        routerLink="/svadby/kalendar"
         routerLinkActive="active"
         (click)="closeNav()"
         >Rezervačný kalendár</a
       >
       <a
         mat-list-item
-        routerLink="/wedding-tour"
+        routerLink="/svadby/obhliadka"
         routerLinkActive="active"
         (click)="closeNav()"
         >Obhliadka</a
       >
       <a
         mat-list-item
-        routerLink="/wedding-premises"
+        routerLink="/svadby/priestory"
         routerLinkActive="active"
         (click)="closeNav()"
         >Priestory</a
       >
       <a
         mat-list-item
-        routerLink="/blog"
+        routerLink="/svadby/blog"
         routerLinkActive="active"
         (click)="closeNav()"
         >Blog (Pripravujeme)</a
@@ -74,14 +74,22 @@
         height="50"
         alt="Penzión Pálenica"
         class="logo"
+        [routerLink]="['/svadby']"
       />
       <span>Penzión Pálenica</span>
       <span class="spacer"></span>
+      <button
+        mat-icon-button
+        class="phone-button"
+        [routerLink]="['/svadby/obhliadka']"
+      >
+        <i class="fas fa-phone"></i>
+      </button>
       <button mat-icon-button class="burger-button" (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </mat-toolbar>
-    <div class="breadcrumb">Title Kde som</div>
+    <app-breadcrumbs></app-breadcrumbs>
     <div class="content" [class.dimmed]="drawer.opened">
       <div
         class="overlay"

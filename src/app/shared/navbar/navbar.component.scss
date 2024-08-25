@@ -1,27 +1,3 @@
-// .navbar-toggler:focus {
-//   outline: none;
-//   box-shadow: none;
-// }
-
-// .navbar {
-//   padding: 0px 5px 0px 5px; /* top right bottom left */
-// }
-
-// .icon-width {
-//   width: 20px;
-//   display: inline-block;
-//   text-align: center;
-// }
-
-// .navigation {
-//   padding: 10px;
-
-//   @media (min-width: 768px) {
-//     /* md and larger screens */
-//     padding: 25px;
-//   }
-// }
-
 .sidenav-container {
   height: 100vh; /* Full screen height */
   position: fixed; /* Fixed position to stay in front */
@@ -133,6 +109,13 @@ mat-icon-button {
 
 // burger
 
+.phone-button {
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  background-color: white; /* White background */
+  padding-right: 15px;
+}
+
 .burger-button {
   border: none; /* Remove border */
   outline: none; /* Remove outline */
@@ -185,14 +168,4 @@ $google-maps-color: #db4437;
 .social-icons button:focus {
   outline: none;
   box-shadow: none;
-}
-
-.breadcrumb {
-  padding: 20px;
-  text-align: center;
-  justify-content: center;
-  border-radius: 8px; /* Rounded corners */
-  background-color: #f0f0f0; /* Light grey background color */
-  margin-left: 4px;
-  margin-right: 4px;
 }

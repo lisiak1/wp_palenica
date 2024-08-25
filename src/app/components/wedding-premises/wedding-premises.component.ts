@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { GalleryComponent } from '../gallery-row/gallery-row.component';
 
 @Component({
   selector: 'app-wedding-premises',
   standalone: true,
-  imports: [],
+  imports: [GalleryComponent],
   templateUrl: './wedding-premises.component.html',
-  styleUrl: './wedding-premises.component.scss'
+  styleUrl: './wedding-premises.component.scss',
 })
-export class WeddingPremisesComponent {
-
-}
+export class WeddingPremisesComponent {}
