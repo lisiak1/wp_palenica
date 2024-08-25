@@ -39,8 +39,9 @@ export class BreadcrumbService {
 
     segments.forEach((segment) => {
       currentUrl += `/${segment}`;
+      const label = labelMapping[segment] || segment; // Use the mapping or fallback to the segment itself
       breadcrumbs.push({
-        label: segment,
+        label: `${label}`,
         url: currentUrl,
       });
     });
@@ -48,3 +49,15 @@ export class BreadcrumbService {
     return breadcrumbs;
   }
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const labelMapping: { [key: string]: string } = {
+  svadby: 'Svadby',
+  obhliadka: 'Obhliadka',
+  blog: 'Blog',
+  kalendar: 'Kalendár',
+  'kryta-terasa': 'Krytá terasa',
+  priestory: 'Priestory',
+  'example-path': 'Example \\ Path', // Example with backslash
+  // Add more mappings as needed
+};
