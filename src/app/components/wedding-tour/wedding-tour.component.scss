@@ -15,10 +15,10 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-image: url("../../../assets/img/logo/profile.webp"); /* Replace with actual photo path */
+  background-image: url("../../../assets/img/obhliadka/profile.png"); /* Replace with actual photo path */
   background-size: cover;
   background-position: center;
-  margin: -125px 0 20px 0;
+  margin: -125px 0 0 0;
   border: 5px solid white;
   z-index: 1;
 }
@@ -27,8 +27,12 @@
   padding: 20px;
   width: 100%;
   text-align: center;
-  height: 200px;
+  height: 180px;
   background-color: #f0f0f0;
+}
+
+.icon {
+  margin-right: 8px; /* Add space to the right of the icons */
 }
 
 .section {
@@ -36,20 +40,21 @@
   padding: 20px;
 }
 
-.section-mobile {
+.section-contact {
   background-color: white;
-  padding: 20px;
-  margin-top: 1rem;
+  padding: 10px;
   text-align: center;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .section p {
-  margin: 10px 0;
+  margin: 0px 0;
   text-align: center;
 }
 
 .photo-background {
-  height: 100vh; /* Full viewport height */
+  height: calc(100vh - var(--header-height) - 150px); /* Full viewport height */
   background-size: cover;
   background-position: center;
   margin: 10px 0; /* Small margin between the divs */
