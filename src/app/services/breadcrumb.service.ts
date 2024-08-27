@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { breadcrumbsMappings } from './breadcrumbs.mappings';
 
 interface Breadcrumb {
   label: string;
@@ -39,7 +40,7 @@ export class BreadcrumbService {
 
     segments.forEach((segment) => {
       currentUrl += `/${segment}`;
-      const label = labelMapping[segment] || segment; // Use the mapping or fallback to the segment itself
+      const label = breadcrumbsMappings[segment] || segment; // Use the mapping or fallback to the segment itself
       breadcrumbs.push({
         label: `${label}`,
         url: currentUrl,
@@ -49,15 +50,3 @@ export class BreadcrumbService {
     return breadcrumbs;
   }
 }
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const labelMapping: { [key: string]: string } = {
-  svadby: 'Svadby',
-  obhliadka: 'Obhliadka',
-  blog: 'Blog',
-  kalendar: 'Kalendár',
-  'kryta-terasa': 'Krytá terasa',
-  priestory: 'Priestory',
-  'example-path': 'Example \\ Path', // Example with backslash
-  // Add more mappings as needed
-};

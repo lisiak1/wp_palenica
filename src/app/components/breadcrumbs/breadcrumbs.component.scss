@@ -4,11 +4,12 @@
 
 .breadcrumb-link {
   text-decoration: none;
-  color: #007bff;
+  color: var(--primary-color);
 }
 
 .breadcrumb-last {
   font-weight: bold;
+  color: var(--primary-color);
 }
 
 .breadcrumb-separator {

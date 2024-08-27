@@ -11,42 +11,34 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'svadby',
     pathMatch: 'full',
-    data: { breadcrumb: 'Domov' },
   },
   {
     path: 'svadby/domov',
     redirectTo: 'svadby',
     pathMatch: 'full',
-    data: { breadcrumb: 'Domov' },
   },
   {
     path: 'svadby',
     component: WeddingHomeComponent,
-    data: { breadcrumb: 'Svadby' },
   },
   {
     path: 'svadby/priestory',
     component: WeddingPremisesComponent,
-    data: { breadcrumb: 'Priestory' },
   },
   {
     path: 'svadby/obhliadka',
     component: WeddingTourComponent,
-    data: { breadcrumb: 'Obhliadka' },
   },
   {
     path: 'svadby/kalendar',
     component: GoogleCalendarComponent,
-    data: { breadcrumb: 'Kalendár' },
   },
   {
     path: 'svadby/blog',
     component: BlogComponent,
-    data: { breadcrumb: 'Blog' },
   },
   {
     path: 'svadby/priestory/kryta-terasa',
     component: CoveredTerraceComponent,
-    data: { breadcrumb: 'Krytá terasa' },
   },
 ];
