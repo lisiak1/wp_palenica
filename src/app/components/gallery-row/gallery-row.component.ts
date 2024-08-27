@@ -11,15 +11,15 @@ import { Component } from '@angular/core';
 export class GalleryComponent {
   sections = [
     {
-      background: 'assets/img/obhliadka/01.jpg',
+      background: 'assets/img/obhliadka/01.webp',
       text: 'Section 1 Text',
     },
     {
-      background: 'assets/img/obhliadka/02.jpg',
+      background: 'assets/img/obhliadka/02.webp',
       text: 'Section 2 Text',
     },
     {
-      background: 'assets/img/obhliadka/03.jpg',
+      background: 'assets/img/obhliadka/03.webp',
       text: 'Section 3 Text',
     },
   ];
