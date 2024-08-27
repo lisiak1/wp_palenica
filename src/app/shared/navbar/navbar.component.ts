@@ -1,5 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import {
+  Component,
+  ViewChild,
+  OnInit,
+  OnDestroy,
+  HostListener,
+} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
@@ -36,12 +42,15 @@ import { BreadcrumbsComponent } from 'src/app/components/breadcrumbs/breadcrumbs
 export class NavbarComponent implements OnInit, OnDestroy {
   @ViewChild('drawer') drawer: MatSidenav | undefined;
 
+  showScrollToTop: boolean = true;
+
   breadcrumbs: Breadcrumb[] = [];
   private destroy$ = new Subject<void>();
 
   constructor(
     private router: Router,
-    private breadcrumbService: BreadcrumbService
+    private breadcrumbService: BreadcrumbService,
+    private viewportScroller: ViewportScroller
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

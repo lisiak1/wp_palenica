@@ -4,7 +4,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - var(--footer-height));
   width: 100%;
   margin-bottom: 10px;
   box-sizing: border-box;
