@@ -22,18 +22,36 @@ export class WeddingHomeComponent {
   peopleAttended = 5000; // Example data
   peopleAccommodated = 2000; // Example data
 
+  reviews = [
+    {
+      photo: '../../../assets/img/obhliadka/profile.webp',
+      text: 'This was an amazing experience!',
+      rating: 5,
+    },
+    {
+      photo: '../../../assets/img/obhliadka/profile.webp',
+      text: 'We had a wonderful time!',
+      rating: 4,
+    },
+    {
+      photo: '../../../assets/img/obhliadka/profile.webp',
+      text: 'Everything was perfect!',
+      rating: 5,
+    },
+  ];
+
   sections: SectionModel[] = [
     {
       title: 'Svadobné priestory',
       subTitle: 'Section 1 Subtitle',
-      text: 'Text some text here here here some text content goes here.',
+      text: 'Naše dlhoročné skúsenosti nám umožňujú vytvárať nezabudnuteľné okamihy.',
       textBottom:
         'Text bottom fksjfsj jsafjsl sjfjsjlf 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_01.jpg',
       imageMobileSmall: 'assets/img/mobile/01.webp',
       imageMobileMedium: 'assets/img/mobile/wedding_01.jpg',
       dimBackground: true,
-      buttonText: 'Prezrieť si priestory',
+      buttonText: 'Svadobné priestory',
       buttonLink: '/svadby/priestory',
     },
     {

@@ -37,9 +37,30 @@ app-footer {
     font-weight: bold;
     color: var(--primary-color);
     font-size: 20px;
+    font-family: "Gilda Display", serif;
   }
 
   .black-color {
     color: var(--black-color);
   }
+
+  .smaller-icon {
+    font-size: 0.65em; /* Adjust the font-size value as needed */
+  }
+
+  .medium-icon {
+    font-size: 1.1em; /* Adjust the font-size value as needed */
+  }
+
+  .text-primary-custom {
+    font-family: "Gilda Display", serif;
+    font-size: 40px !important; /* Adjust the font size as needed */
+    color: white;
+  }
+
+  // .text-primary-custom2 {
+  //   font-family: "Gilda Display", serif;
+  //   font-size: 16px !important; /* Adjust the font size as needed */
+  //   color: white;
+  // }
 }
