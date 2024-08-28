@@ -40,6 +40,11 @@ app-footer {
     font-family: "Gilda Display", serif;
   }
 
+  .primary-text2 {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
   .black-color {
     color: var(--black-color);
   }
@@ -49,7 +54,7 @@ app-footer {
   }
 
   .medium-icon {
-    font-size: 1.1em; /* Adjust the font-size value as needed */
+    font-size: 1.2em; /* Adjust the font-size value as needed */
   }
 
   .text-primary-custom {
@@ -63,4 +68,11 @@ app-footer {
   //   font-size: 16px !important; /* Adjust the font size as needed */
   //   color: white;
   // }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+  }
 }

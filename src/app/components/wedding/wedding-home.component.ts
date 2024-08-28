@@ -1,6 +1,6 @@
 import { SectionModel } from '../section/section.model';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SectionComponent } from '../section/section.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,29 +17,45 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
   ],
 })
-export class WeddingHomeComponent {
+export class WeddingHomeComponent implements OnInit {
   weddingsOrganized = 1000; // Example data
   peopleAttended = 5000; // Example data
   peopleAccommodated = 2000; // Example data
 
+  currentReview = 0;
+
+  prevReview() {
+    this.currentReview =
+      this.currentReview > 0 ? this.currentReview - 1 : this.reviews.length - 1;
+  }
+
+  nextReview() {
+    this.currentReview =
+      this.currentReview < this.reviews.length - 1 ? this.currentReview + 1 : 0;
+  }
+
   reviews = [
     {
       photo: '../../../assets/img/obhliadka/profile.webp',
-      text: 'This was an amazing experience!',
+      text: 'Toto bola úžasná skúsenosť! Všetko bolo perfektne zorganizované a priestory boli nádherné.',
       rating: 5,
     },
     {
       photo: '../../../assets/img/obhliadka/profile.webp',
-      text: 'We had a wonderful time!',
-      rating: 4,
+      text: 'Mali sme nádherný čas! Priestory boli krásne a personál bol veľmi priateľský a ochotný.',
+      rating: 5,
     },
     {
       photo: '../../../assets/img/obhliadka/profile.webp',
-      text: 'Everything was perfect!',
+      text: 'Všetko bolo dokonalé! Naša svadba bola nezabudnuteľná vďaka krásnym priestorom a skvelej organizácii.',
+      rating: 5,
+    },
+    {
+      photo: '../../../assets/img/obhliadka/profile.webp',
+      text: 'Priestory boli úžasné a všetko bolo perfektne pripravené. Určite odporúčame!',
       rating: 5,
     },
   ];
-
   sections: SectionModel[] = [
     {
       title: 'Svadobné priestory',
@@ -55,9 +71,9 @@ export class WeddingHomeComponent {
       buttonLink: '/svadby/priestory',
     },
     {
-      title: 'Section 2 Title',
+      title: 'Obhliadka',
       subTitle: 'Section 2 Subtitle',
-      text: 'Section 2 text content goes here.',
+      text: 'Dohodnite si obhliadku ešte dnes a radi Vám všetko ukážeme.',
       textBottom: 'Section 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_03.jpg',
       imageMobileSmall: 'assets/img/mobile/03.webp',
@@ -67,9 +83,9 @@ export class WeddingHomeComponent {
       buttonLink: '/svadby/obhliadka',
     },
     {
-      title: 'Section 2 Title',
+      title: 'Výberte si Váš termín',
       subTitle: 'Section 2 Subtitle',
-      text: 'Section 2 text content goes here.',
+      text: 'Prezrite si náš kalendár a zarezervujte si termín, ktorý Vám najviac vyhovuje.',
       textBottom: 'Section 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_02.jpg',
       imageMobileSmall: 'assets/img/mobile/02.webp',
@@ -79,9 +95,9 @@ export class WeddingHomeComponent {
       buttonLink: '/svadby/kalendar',
     },
     {
-      title: 'Section 2 Title',
+      title: 'Svadobné blogy',
       subTitle: 'Section 2 Subtitle',
-      text: 'Section 2 text content goes here.',
+      text: 'Inšpirujte sa našimi blogmi a získajte nové nápady pre svoju svadbu.',
       textBottom: 'Section 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_04.jpg',
       imageMobileSmall: 'assets/img/mobile/04.webp',
@@ -91,9 +107,9 @@ export class WeddingHomeComponent {
       buttonLink: '/svadby/blog',
     },
     {
-      title: 'Section 2 Title',
+      title: 'Možnosti ubytovania',
       subTitle: 'Section 2 Subtitle',
-      text: 'Section 2 text content goes here.',
+      text: 'Ponúkame ubytovanie pre všetkých Vašich hostí priamo v našom Penzióne.',
       textBottom: 'Section 1 text content goes here.',
       imageDesktop: 'assets/img/desktop/wedding_02.jpg',
       imageMobileSmall: 'assets/img/mobile/05.webp',
@@ -150,4 +166,7 @@ export class WeddingHomeComponent {
   ];
 
   constructor() {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }

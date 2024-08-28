@@ -6,17 +6,17 @@
   <h2>Naše úspechy</h2>
   <div class="stats">
     <div class="stat-item">
-      <i class="fas fa-heart medium-icon"></i>
+      <i class="fas fa-heart heart-icon medium-icon"></i>
       <h3>{{ weddingsOrganized | number }}</h3>
       <p>svadieb</p>
     </div>
     <div class="stat-item">
-      <i class="fas fa-glass-cheers medium-icon"></i>
+      <i class="fas fa-glass-cheers cheers-icon medium-icon"></i>
       <h3>{{ peopleAttended | number }}</h3>
       <p>osláv</p>
     </div>
     <div class="stat-item">
-      <i class="fas fa-bed medium-icon"></i>
+      <i class="fas fa-bed bed-icon medium-icon"></i>
       <h3>{{ peopleAccommodated | number }}</h3>
       <p>ubytovaní</p>
     </div>
@@ -24,21 +24,33 @@
 </div>
 
 <div class="reviews-section mt-5">
-  <h2>Recenzie</h2>
-  <div class="reviews" *ngFor="let review of reviews">
-    <div class="review-item">
-      <img [src]="review.photo" alt="Reviewer photo" class="review-photo" />
-      <p>{{ review.text }}</p>
-      <div class="stars">
-        <i
-          *ngFor="let star of [1, 2, 3, 4, 5]"
-          class="fas"
-          [ngClass]="{
-            'fa-star': star <= review.rating,
-            'fa-star-o': star > review.rating
-          }"
-        ></i>
+  <div class="reviews-container">
+    <h2>Povedali o nás</h2>
+    <div class="review-carousel">
+      <button (click)="prevReview()" class="carousel-arrow left-arrow">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="review-item">
+        <img
+          [src]="reviews[currentReview].photo"
+          alt="Reviewer photo"
+          class="review-photo"
+        />
+        <p>{{ reviews[currentReview].text }}</p>
+        <div class="stars">
+          <i
+            *ngFor="let star of [1, 2, 3, 4, 5]"
+            class="fas"
+            [ngClass]="{
+              'fa-star': star <= reviews[currentReview].rating,
+              'fa-star-o': star > reviews[currentReview].rating
+            }"
+          ></i>
+        </div>
       </div>
+      <button (click)="nextReview()" class="carousel-arrow right-arrow">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
   </div>
 </div>
