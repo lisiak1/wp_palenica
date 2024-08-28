@@ -1,7 +1,8 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { WeddingHomeComponent } from './components/wedding/wedding-home.component';
+import { ScrollService } from './services/scroll.service';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -22,7 +23,11 @@ export class AppComponent implements OnInit {
   isDesktop: boolean = false;
   showScrollToTop: boolean = true;
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(
+    private scrollService: ScrollService,
+    private router: Router,
+    private viewportScroller: ViewportScroller
+  ) {}
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -31,6 +36,19 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.checkScreenSize();
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const sidenavContent = document.querySelector('mat-sidenav-content');
+        if (sidenavContent) {
+          sidenavContent.scrollTop = 0;
+        }
+
+        setTimeout(() => {
+          this.viewportScroller.scrollToPosition([0, 0]);
+        }, 0);
+      }
+    });
   }
 
   checkScreenSize() {

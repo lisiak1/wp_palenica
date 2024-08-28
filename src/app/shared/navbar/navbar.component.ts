@@ -1,11 +1,5 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import {
-  Component,
-  ViewChild,
-  OnInit,
-  OnDestroy,
-  HostListener,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
@@ -16,11 +10,11 @@ import {
   RouterLink,
   RouterModule,
 } from '@angular/router';
-import { FooterComponent } from '../footer/footer.component';
-import { Breadcrumb } from 'src/app/services/breadcrumbs.model';
-import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
 import { Subject, takeUntil } from 'rxjs';
 import { BreadcrumbsComponent } from 'src/app/components/breadcrumbs/breadcrumbs.component';
+import { BreadcrumbService } from 'src/app/services/breadcrumb.service';
+import { Breadcrumb } from 'src/app/services/breadcrumbs.model';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-main',

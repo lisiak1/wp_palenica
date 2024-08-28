@@ -7,4 +7,6 @@ export interface SectionModel {
   imageMobileSmall: string;
   imageMobileMedium: string;
   dimBackground: boolean | undefined;
+  buttonText?: string | undefined;
+  buttonLink?: string | undefined;
 }

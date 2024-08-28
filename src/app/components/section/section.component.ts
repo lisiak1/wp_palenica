@@ -16,12 +16,13 @@ import {
   transition,
 } from '@angular/animations';
 import { SectionModel } from './section.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-section',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, LazyLoadBackgroundDirective],
+  imports: [CommonModule, LazyLoadBackgroundDirective, RouterLink],
   templateUrl: './section.component.html',
   styleUrl: './section.component.scss',
   animations: [

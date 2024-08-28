@@ -21,6 +21,10 @@
   </div>
 
   <div class="button-container">
-    <button class="btn" @buttonAnimation>Click To Action</button>
+    <button class="btn" @buttonAnimation>
+      <a routerLink="{{ model.buttonLink }}">
+        {{ model.buttonText }}
+      </a>
+    </button>
   </div>
 </div>
