@@ -17,19 +17,22 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
 }
 
 .title {
   position: relative;
   color: white;
   padding: 20px;
+  padding-top: 70px;
 }
 
 .content {
   position: relative;
   color: white;
   padding: 20px;
+  padding-top: 0px;
+  max-width: 80%;
 }
 
 .button-container {
@@ -44,10 +47,23 @@
 }
 
 .btn {
-  font-size: 30px; /* Increase font size */
-  color: white; /* Adjust text color for better visibility */
+  font-size: 25px; /* Increase font size */
+  //color: white; /* Adjust text color for better visibility */
   background-color: transparent; /* Make button background transparent */
-  background: rgba(0, 0, 0, 0.5); /* Same background as content */
+  //background: rgba(0, 0, 0, 0.5); /* Same background as content */
   border: 1px solid white; /* Optional: Add border for better visibility */
   cursor: pointer;
+  text-transform: uppercase;
+  background: white;
+  color: var(--primary-color);
 }
+
+.no-style-link {
+  color: inherit; /* Inherit color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+
+// .no-style-link:hover {
+//   color: inherit; /* Ensure color does not change on hover */
+//   text-decoration: none; /* Ensure underline does not appear on hover */
+// }

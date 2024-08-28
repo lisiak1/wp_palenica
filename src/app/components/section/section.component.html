@@ -5,7 +5,7 @@
 >
   <div class="title">
     <h1 @titleAnimation>{{ model.title }}</h1>
-    <h4 @textAnimation>{{ model.subTitle }}</h4>
+    <!-- <h4 @textAnimation>{{ model.subTitle }}</h4> -->
   </div>
 
   <div class="content">
@@ -14,15 +14,15 @@
     </p>
   </div>
 
-  <div class="content">
+  <!-- <div class="content">
     <p @textAnimation>
       {{ model.textBottom }}
     </p>
-  </div>
+  </div> -->
 
   <div class="button-container">
     <button class="btn" @buttonAnimation>
-      <a routerLink="{{ model.buttonLink }}">
+      <a class="no-style-link" routerLink="{{ model.buttonLink }}">
         {{ model.buttonText }}
       </a>
     </button>

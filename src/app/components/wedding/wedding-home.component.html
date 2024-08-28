@@ -2,6 +2,27 @@
   <app-section [model]="section"> </app-section>
 </div>
 
+<div class="stats-section mt-5">
+  <h2>Naše úspechy</h2>
+  <div class="stats">
+    <div class="stat-item">
+      <i class="fas fa-heart"></i>
+      <h3>{{ weddingsOrganized | number }}</h3>
+      <p>svadieb</p>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-glass-cheers"></i>
+      <h3>{{ peopleAttended | number }}</h3>
+      <p>osláv</p>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-bed"></i>
+      <h3>{{ peopleAccommodated | number }}</h3>
+      <p>ubytovaní</p>
+    </div>
+  </div>
+</div>
+
 <div class="faq-section mt-5">
   <h2>Často kladené otázky</h2>
   <mat-accordion>

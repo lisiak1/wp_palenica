@@ -18,6 +18,10 @@ import { MatButtonModule } from '@angular/material/button';
   ],
 })
 export class WeddingHomeComponent {
+  weddingsOrganized = 1000; // Example data
+  peopleAttended = 5000; // Example data
+  peopleAccommodated = 2000; // Example data
+
   sections: SectionModel[] = [
     {
       title: 'Svadobné priestory',
@@ -30,6 +34,7 @@ export class WeddingHomeComponent {
       imageMobileMedium: 'assets/img/mobile/wedding_01.jpg',
       dimBackground: true,
       buttonText: 'Prezrieť si priestory',
+      buttonLink: '/svadby/priestory',
     },
     {
       title: 'Section 2 Title',
@@ -40,7 +45,7 @@ export class WeddingHomeComponent {
       imageMobileSmall: 'assets/img/mobile/03.webp',
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
       dimBackground: true,
-      buttonText: 'Obhliadka priestorov',
+      buttonText: 'Dohodnúť obhliadku',
       buttonLink: '/svadby/obhliadka',
     },
     {
@@ -52,6 +57,8 @@ export class WeddingHomeComponent {
       imageMobileSmall: 'assets/img/mobile/02.webp',
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
       dimBackground: true,
+      buttonText: 'Voľné termíny',
+      buttonLink: '/svadby/kalendar',
     },
     {
       title: 'Section 2 Title',
@@ -62,6 +69,8 @@ export class WeddingHomeComponent {
       imageMobileSmall: 'assets/img/mobile/04.webp',
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
       dimBackground: true,
+      buttonText: 'Svadobný blog',
+      buttonLink: '/svadby/blog',
     },
     {
       title: 'Section 2 Title',
@@ -72,6 +81,8 @@ export class WeddingHomeComponent {
       imageMobileSmall: 'assets/img/mobile/05.webp',
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
       dimBackground: true,
+      buttonText: 'Ubytovanie',
+      buttonLink: '/svadby/ubytovanie',
     },
   ];
 

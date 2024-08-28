@@ -30,10 +30,16 @@ app-footer {
 
   --primary-color: #9a6b58;
   --secondary-color: #6c757d;
+  --black-color: black;
   --primary-color-solid: darken(#9a6b58, 50%);
 
   .primary-text {
     font-weight: bold;
     color: var(--primary-color);
+    font-size: 20px;
+  }
+
+  .black-color {
+    color: var(--black-color);
   }
 }
