@@ -36,16 +36,19 @@
           alt="Reviewer photo"
           class="review-photo"
         />
-        <p>{{ reviews[currentReview].text }}</p>
+        <p class="review-text">{{ reviews[currentReview].text }}</p>
         <div class="stars">
           <i
             *ngFor="let star of [1, 2, 3, 4, 5]"
-            class="fas"
+            class="material-icons"
             [ngClass]="{
-              'fa-star': star <= reviews[currentReview].rating,
-              'fa-star-o': star > reviews[currentReview].rating
+              filled: star <= reviews[currentReview].rating,
+              outlined: star > reviews[currentReview].rating
             }"
-          ></i>
+            >{{
+              star <= reviews[currentReview].rating ? "star" : "star_border"
+            }}</i
+          >
         </div>
       </div>
       <button (click)="nextReview()" class="carousel-arrow right-arrow">

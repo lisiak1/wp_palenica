@@ -36,23 +36,13 @@ export class WeddingHomeComponent implements OnInit {
 
   reviews = [
     {
-      photo: 'assets/img/obhliadka/profile.webp',
-      text: 'Toto bola úžasná skúsenosť! Všetko bolo perfektne zorganizované a priestory boli nádherné.',
-      rating: 5,
-    },
-    {
-      photo: 'assets/img/obhliadka/profile.webp',
+      photo: 'assets/img/logo/profile.webp',
       text: 'Mali sme nádherný čas! Priestory boli krásne a personál bol veľmi priateľský a ochotný.',
       rating: 5,
     },
     {
       photo: 'assets/img/obhliadka/profile.webp',
-      text: 'Všetko bolo dokonalé! Naša svadba bola nezabudnuteľná vďaka krásnym priestorom a skvelej organizácii.',
-      rating: 5,
-    },
-    {
-      photo: 'assets/img/obhliadka/profile.webp',
-      text: 'Priestory boli úžasné a všetko bolo perfektne pripravené. Určite odporúčame!',
+      text: 'Toto bola úžasná skúsenosť! Všetko bolo perfektne zorganizované a priestory boli nádherné.',
       rating: 5,
     },
   ];
