@@ -1,7 +1,7 @@
 <div
   class="section-container"
   [class.dim-background]="model.dimBackground"
-  [appLazyLoadBackground]="backgroundImage"
+  [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }"
 >
   <div class="title">
     <h1 class="text-primary-custom" @titleAnimation>{{ model.title }}</h1>
