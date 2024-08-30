@@ -6,4 +6,5 @@ export const breadcrumbsMappings: { [key: string]: string } = {
   kalendar: 'Kalendár',
   'kryta-terasa': 'Krytá terasa',
   priestory: 'Priestory',
+  rezervacia: 'Rezervácia',
 };

@@ -1,4 +1,4 @@
-import { importProvidersFrom } from '@angular/core';
+import { importProvidersFrom, LOCALE_ID } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { bootstrapApplication } from '@angular/platform-browser';
@@ -16,9 +16,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import localeSk from '@angular/common/locales/sk';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeSk);
 
 bootstrapApplication(AppComponent, {
   providers: [
+    { provide: LOCALE_ID, useValue: 'sk' },
     provideRouter(
       routes,
       withInMemoryScrolling({

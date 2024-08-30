@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-google-calendar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './google-calendar.component.html',
-  styleUrl: './google-calendar.component.scss',
+  styleUrls: ['./google-calendar.component.scss'],
 })
 export class GoogleCalendarComponent {}

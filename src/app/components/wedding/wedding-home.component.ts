@@ -1,6 +1,6 @@
 import { SectionModel } from '../section/section.model';
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SectionComponent } from '../section/section.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,7 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
   ],
 })
-export class WeddingHomeComponent implements OnInit {
+export class WeddingHomeComponent {
   weddingsOrganized = 1000; // Example data
   peopleAttended = 5000; // Example data
   peopleAccommodated = 2000; // Example data
@@ -156,7 +156,4 @@ export class WeddingHomeComponent implements OnInit {
   ];
 
   constructor() {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 }

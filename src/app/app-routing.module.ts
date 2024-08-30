@@ -5,6 +5,7 @@ import { WeddingTourComponent } from './components/wedding-tour/wedding-tour.com
 import { GoogleCalendarComponent } from './components/google-calendar/google-calendar.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CoveredTerraceComponent } from './components/covered-terrace/covered-terrace.component';
+import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
 
 export const routes: Routes = [
   {
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'svadby/kalendar',
     component: GoogleCalendarComponent,
+  },
+  {
+    path: 'svadby/rezervacia',
+    component: ReservationFormComponent,
   },
   {
     path: 'svadby/blog',
