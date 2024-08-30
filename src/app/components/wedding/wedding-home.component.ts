@@ -106,7 +106,7 @@ export class WeddingHomeComponent {
       imageMobileMedium: 'assets/img/mobile/wedding_02.jpg',
       dimBackground: true,
       buttonText: 'Ubytovanie',
-      buttonLink: '/svadby/ubytovanie',
+      buttonLink: '/svadby/priestory/ubytovanie',
     },
   ];
 

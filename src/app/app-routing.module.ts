@@ -6,6 +6,7 @@ import { GoogleCalendarComponent } from './components/google-calendar/google-cal
 import { BlogComponent } from './components/blog/blog.component';
 import { CoveredTerraceComponent } from './components/covered-terrace/covered-terrace.component';
 import { ReservationFormComponent } from './components/reservation-form/reservation-form.component';
+import { AccomodationComponent } from './components/accomodation/accomodation.component';
 
 export const routes: Routes = [
   {
@@ -45,5 +46,9 @@ export const routes: Routes = [
   {
     path: 'svadby/priestory/kryta-terasa',
     component: CoveredTerraceComponent,
+  },
+  {
+    path: 'svadby/priestory/ubytovanie',
+    component: AccomodationComponent,
   },
 ];
