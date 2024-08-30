@@ -1,6 +1,5 @@
 .gallery-section {
   margin-top: 1rem;
-  // flex-grow: 1;
   height: 100%;
   background-size: cover;
   background-position: center;
@@ -25,17 +24,27 @@
     background: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
-    font-size: 2rem;
+    // color: var(--primary-color); /* Use primary color */
+    font-size: 24px; /* Adjust size as needed */
     padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    z-index: 1;
+    width: 50px; /* Set width for the circular shape */
+    height: 50px; /* Set height for the circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &.left {
-      left: 10px;
-    }
+  .arrow.left {
+    left: 10px;
+  }
 
-    &.right {
-      right: 10px;
-    }
+  .arrow.right {
+    right: 10px;
+  }
+
+  .arrow i {
+    // color: var(--primary-color); /* Use primary color for the icon */
   }
 }
