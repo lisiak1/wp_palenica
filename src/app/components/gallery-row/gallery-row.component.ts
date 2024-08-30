@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { GalleryRowModel } from './gallery-row.model';
 
 @Component({
   selector: 'app-gallery-row',
@@ -9,20 +10,7 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
 })
 export class GalleryComponent {
-  sections = [
-    {
-      background: 'assets/img/kryta_terasa/01.jpg',
-      text: 'Section 1 Text',
-    },
-    {
-      background: 'assets/img/kryta_terasa/02.jpg',
-      text: 'Section 2 Text',
-    },
-    {
-      background: 'assets/img/kryta_terasa/03.jpg',
-      text: 'Section 3 Text',
-    },
-  ];
+  @Input() sections: GalleryRowModel[] = [];
 
   currentIndex = 0;
 
